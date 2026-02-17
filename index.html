@@ -1,1 +1,117 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Divte | Production & Portfolio</title>
+    <style>
+        :root {
+            --primary: #0984e3;
+            --dark: #0f172a;
+            --accent: #74b9ff;
+            --text: #f8fafc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--dark); color: var(--text); line-height: 1.6; }
+
+        /* Header */
+        header { padding: 2rem 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(15, 23, 42, 0.9); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #334155; }
+        .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -1px; }
+        .nav-links a { color: var(--text); text-decoration: none; margin-left: 2rem; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* Hero Section */
+        .hero { height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(to bottom, #0f172a, #1e293b); padding: 0 10%; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; background: linear-gradient(to right, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.2rem; color: #94a3b8; max-width: 600px; margin-bottom: 2rem; }
+
+        /* Production Branches */
+        .section-title { text-align: center; margin: 4rem 0 2rem; font-size: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 0 5%; }
+        .card { background: #1e293b; padding: 2rem; border-radius: 12px; border: 1px solid #334155; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        .card h3 { color: var(--primary); margin-bottom: 1rem; }
+
+        /* Resume Section Snippet */
+        .resume-snippet { background: #0f172a; padding: 4rem 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        .skill-tag { display: inline-block; background: #334155; padding: 5px 12px; border-radius: 4px; margin: 5px; font-size: 0.9rem; }
+
+        /* CTA */
+        .cta-container { text-align: center; padding: 4rem 0; }
+        .btn { background: var(--primary); color: white; padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 10px 15px -3px rgba(9, 132, 227, 0.4); }
+        .btn:hover { background: var(--accent); }
+
+        footer { text-align: center; padding: 2rem; border-top: 1px solid #334155; color: #64748b; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">ADITYA DIVTE PRODUCTION</div>
+    <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#branches">Branches</a>
+        <a href="https://adityadivte.com/clgedu-pricing-plan/">Pricing</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Beyond the imagination of a fake world</h1>
+    <p>Game Designer | Unreal Engine Specialist | Animation Content Developer</p>
+    <a href="https://adityadivte.com/clgedu-pricing-plan/" class="btn">Explore Service Plans</a>
+</section>
+
+<h2 class="section-title" id="branches">Production Branches</h2>
+<div class="grid">
+    <div class="card">
+        <h3>Game Development</h3>
+        [cite_start]<p>Expert in Unreal Engine 5, Blueprints, and core gameplay mechanics for open-world and horror titles[cite: 22, 24, 69].</p>
+    </div>
+    <div class="card">
+        <h3>Flim & Cinematic VFX</h3>
+        [cite_start]<p>Creating immersive virtual shorts and high-end animations using DaVinci Resolve and After Effects[cite: 59, 117, 155].</p>
+    </div>
+    <div class="card">
+        <h3>Construction & ArchViz</h3>
+        [cite_start]<p>2D/3D Architectural Visualization and VR Property Development for modern havens[cite: 112].</p>
+    </div>
+</div>
+
+<section class="resume-snippet" id="about">
+    <div>
+        <h2>Technical Expertise</h2>
+        [cite_start]<p style="margin-top: 1rem; color: #94a3b8;">6+ years of experience in full-cycle development and realistic 3D animation pipelines[cite: 22, 65].</p>
+        <div style="margin-top: 2rem;">
+            <span class="skill-tag">Unreal Engine 5</span>
+            <span class="skill-tag">Blender</span>
+            <span class="skill-tag">ZBrush</span>
+            <span class="skill-tag">Substance Painter</span>
+            <span class="skill-tag">Python Automation</span>
+            <span class="skill-tag">Mocap Cleanup</span>
+        </div>
+    </div>
+    <div>
+        <h2>Key Achievements</h2>
+        <ul style="list-style: none; margin-top: 1rem;">
+            [cite_start]<li style="margin-bottom: 10px;">🏆 Sold custom 3D environment for 25 Lakh[cite: 158].</li>
+            [cite_start]<li style="margin-bottom: 10px;">🎮 Developed 6 complete 3D Games[cite: 107, 153].</li>
+            [cite_start]<li style="margin-bottom: 10px;">📱 Developed 4 Android Applications[cite: 107, 154].</li>
+            [cite_start]<li style="margin-bottom: 10px;">🛡️ Cyber Law (Degree in Progress)[cite: 115].</li>
+        </ul>
+    </div>
+</section>
+
+<div class="cta-container">
+    <h2>Ready to build your haven?</h2>
+    <p style="margin-bottom: 2rem; color: #94a3b8;">Choose a plan that fits your project needs.</p>
+    <a href="https://adityadivte.com/clgedu-pricing-plan/" class="btn">View Detailed Pricing</a>
+</div>
+
+<footer>
+    &copy; 2026 Aditya Divte Production. Chhatrapati Sambhajinagar, Maharashtra.
+</footer>
+
+</body>
+</html>
