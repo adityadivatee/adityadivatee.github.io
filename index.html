@@ -6,22 +6,18 @@
     
     <title>Aditya Divte Production | Creative Studio & IT Solutions</title>
     <meta name="description" content="Aditya Divte Production is a premier creative studio in Maharashtra offering Game Development, Cinematic VFX, ArchViz, and Custom Software Solutions.">
-    <meta name="keywords" content="Aditya Divte, Game Design, Unreal Engine, VFX, ArchViz, IT Consulting, Internship">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
     <style>
         :root {
-            --primary: #2563eb;       /* Corporate Blue */
-            --secondary: #0f172a;     /* Dark Navy */
-            --accent: #38bdf8;        /* Light Blue */
-            --light-bg: #f8fafc;
+            --primary: #2563eb;       
+            --secondary: #0f172a;     
             --text-dark: #1e293b;
             --text-light: #64748b;
         }
@@ -34,74 +30,80 @@
         .logo img { max-height: 50px; }
         .navmenu ul { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
         .navmenu a { color: var(--text-dark); font-weight: 600; font-size: 15px; transition: 0.3s; }
-        .navmenu a:hover, .navmenu a.active { color: var(--primary); }
+        .navmenu a:hover { color: var(--primary); }
         .btn-getstarted { background: var(--primary); color: white; padding: 10px 25px; border-radius: 50px; font-weight: 600; transition: 0.3s; }
         .btn-getstarted:hover { background: #1d4ed8; color: white; }
 
         /* HERO SECTION */
-        .hero { padding: 120px 0 60px; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); overflow: hidden; }
+        .hero { padding: 140px 0 80px; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); }
         .company-badge { display: inline-block; background: #dbeafe; color: var(--primary); padding: 8px 16px; border-radius: 50px; font-size: 14px; font-weight: 600; }
         .hero h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.2; color: var(--secondary); }
         .hero .accent-text { color: var(--primary); }
-        .hero p { font-size: 1.1rem; color: var(--text-light); margin-top: 20px; }
-        .hero-image img { border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
         
-        /* Tech Stack Badges in Hero */
-        .customer-avatars { display: flex; gap: 10px; margin-top: 20px; }
-        .avatar { width: 40px; height: 40px; border-radius: 50%; font-size: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-
         /* STATS */
-        .stats-item { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); height: 100%; transition: 0.3s; }
+        .stats-item { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); height: 100%; transition: 0.3s; text-align: center; }
         .stats-item:hover { transform: translateY(-5px); }
         .stat-icon { font-size: 32px; color: var(--primary); margin-bottom: 15px; }
         .stat-content h4 { font-size: 20px; font-weight: 700; margin-bottom: 5px; }
 
         /* ABOUT */
         .about-title { font-weight: 700; font-size: 2rem; margin-bottom: 20px; color: var(--secondary); }
-        .about-meta { color: var(--primary); font-weight: 700; letter-spacing: 1px; font-size: 14px; display: block; margin-bottom: 10px; }
         .feature-list { list-style: none; padding: 0; }
         .feature-list li { margin-bottom: 10px; font-size: 15px; }
         .feature-list i { color: var(--primary); margin-right: 10px; }
         .profile-image { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
-        .experience-badge { position: absolute; bottom: 30px; left: -20px; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; }
-        .experience-badge h3 { font-size: 28px; font-weight: 800; color: var(--primary); margin: 0; }
-
-        /* SERVICES */
-        .service-card { background: white; padding: 30px; border-radius: 16px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid #e2e8f0; align-items: flex-start; gap: 20px; }
-        .service-card:hover { transform: translateY(-5px); border-color: var(--primary); }
-        .service-card .icon { width: 60px; height: 60px; background: #eff6ff; color: var(--primary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; }
-        .read-more { color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 5px; margin-top: 10px; }
-
-        /* INTERNSHIP TABS */
-        .nav-tabs { border: none; justify-content: center; margin-bottom: 30px; gap: 20px; }
-        .nav-tabs .nav-link { border: none; background: white; color: var(--text-dark); border-radius: 50px; padding: 12px 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: 0.3s; }
-        .nav-tabs .nav-link.active { background: var(--primary); color: white; }
-        .nav-tabs .nav-link h4 { margin: 0; font-size: 16px; font-weight: 600; }
+        
+        /* NEW SERVICE CARD DESIGN - NO CROPPING */
+        .service-card { 
+            background: white; 
+            border-radius: 16px; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05); 
+            transition: 0.3s; 
+            border: 1px solid #e2e8f0; 
+            overflow: hidden; /* Keeps image inside rounded corners */
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-card:hover { transform: translateY(-8px); border-color: var(--primary); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        
+        /* Full Width Image at Top */
+        .service-img-wrapper {
+            width: 100%;
+            background: #f1f5f9;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .service-card img { 
+            width: 100%; 
+            height: auto; /* Height adjusts automatically */
+            display: block;
+            object-fit: contain; /* Ensures full banner is visible */
+        }
+        .service-content { padding: 25px; flex-grow: 1; }
+        .service-content h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 10px; }
+        .read-more { color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 5px; margin-top: auto; }
 
         /* FOOTER */
         .footer { background: var(--secondary); color: white; padding-top: 60px; }
         .footer a { color: #cbd5e1; transition: 0.3s; }
         .footer a:hover { color: white; }
 
-        /* MOBILE NAV */
-        @media(max-width: 991px) {
-            .navmenu { display: none; } /* Simplified for this snippet */
-        }
+        @media(max-width: 991px) { .navmenu { display: none; } }
     </style>
 </head>
 
-<body data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-delay="0">
+<body>
 
-    <header id="header" class="header fixed-top d-flex align-items-center">
+    <header class="header fixed-top d-flex align-items-center">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
             <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
                 <img src="images/adityaproductionlogo-removebg-preview.png" alt="Aditya Divte Production">
                 <span class="d-none d-lg-block ms-2 fw-bold text-dark">Aditya Divte Production</span>
             </a>
 
-            <nav id="navmenu" class="navmenu d-none d-xl-block">
+            <nav class="navmenu d-none d-xl-block">
                 <ul>
-                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#hero">Home</a></li>
                     <li><a href="#about">About Studio</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#internship">Training</a></li>
@@ -113,93 +115,68 @@
         </div>
     </header>
 
-    <main class="main">
+    <main>
 
         <section id="hero" class="hero">
             <div class="container" data-aos="fade-up">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <div class="hero-content">
-                            <div class="company-badge mb-4">
-                                <i class="bi bi-rocket-takeoff-fill me-2"></i>
-                                Beyond the Imagination of a Fake World
-                            </div>
-
-                            <h1 class="mb-4">
-                                Premier Production House <br>
-                                & IT Solutions <br>
-                                <span class="accent-text">in Maharashtra</span>
-                            </h1>
-
-                            <p class="mb-4">
-                                Aditya Divte Production is a full-service creative studio specializing in 
-                                <strong>Unreal Engine Game Development</strong>, <strong>Cinematic VFX</strong>, 
-                                <strong>ArchViz</strong>, and <strong>Custom Software</strong>. 
-                                We bridge the gap between architectural precision and fluid gameplay mechanics.
-                            </p>
-
-                            <div class="d-flex gap-3">
-                                <a href="#services" class="btn btn-primary rounded-pill px-4 py-2">Our Services</a>
-                                <a href="https://www.youtube.com/@vssoftwarelab" class="btn btn-outline-primary rounded-pill px-4 py-2">
-                                    <i class="bi bi-play-circle me-1"></i> Showreel
-                                </a>
-                            </div>
+                        <div class="company-badge mb-4">
+                            <i class="bi bi-rocket-takeoff-fill me-2"></i>
+                            Beyond the Imagination of a Fake World
+                        </div>
+                        <h1 class="mb-4">
+                            Premier Production House <br>
+                            & IT Solutions <br>
+                            <span class="accent-text">in Maharashtra</span>
+                        </h1>
+                        <p class="mb-4">
+                            Aditya Divte Production is a full-service creative studio specializing in 
+                            <strong>Unreal Engine Game Development</strong>, <strong>Cinematic VFX</strong>, 
+                            <strong>ArchViz</strong>, and <strong>Custom Software</strong>. 
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="#services" class="btn btn-primary rounded-pill px-4 py-2">Our Services</a>
+                            <a href="https://www.youtube.com/@vssoftwarelab" class="btn btn-outline-primary rounded-pill px-4 py-2">
+                                <i class="bi bi-play-circle me-1"></i> Showreel
+                            </a>
                         </div>
                     </div>
                     
                     <div class="col-lg-6 mt-5 mt-lg-0">
-                        <div class="hero-image" data-aos="zoom-out">
-                            <img src="images/ChatGPT Image Jul 2, 2025, 03_05_21 AM.jpg" alt="Production House Art" class="img-fluid w-100">
-                            
-                            <div class="customers-badge mt-3 p-3 bg-white rounded shadow-sm d-inline-block">
-                                <span class="fw-bold d-block mb-2">Tech Stack Expertise</span>
-                                <div class="customer-avatars">
-                                    <span class="avatar bg-dark text-white d-flex align-items-center justify-content-center"><i class="devicon-unrealengine-original"></i></span>
-                                    <span class="avatar bg-warning text-dark d-flex align-items-center justify-content-center"><i class="devicon-python-plain"></i></span>
-                                    <span class="avatar bg-primary text-white d-flex align-items-center justify-content-center"><i class="devicon-blender-original"></i></span>
-                                    <span class="avatar bg-info text-white d-flex align-items-center justify-content-center"><i class="devicon-react-original"></i></span>
-                                    <span class="avatar bg-light text-dark d-flex align-items-center justify-content-center fw-bold">+10</span>
-                                </div>
-                            </div>
+                        <div data-aos="zoom-out">
+                            <img src="images/ChatGPT Image Jul 2, 2025, 03_05_21 AM.jpg" class="img-fluid rounded-4 shadow-lg w-100" alt="Creative Design">
                         </div>
                     </div>
                 </div>
 
                 <div class="row stats-row gy-4 mt-5">
                     <div class="col-lg-3 col-md-6">
-                        <div class="stats-item text-center">
+                        <div class="stats-item">
                             <div class="stat-icon"><i class="bi bi-trophy-fill"></i></div>
-                            <div class="stat-content">
-                                <h4>25 Lakhs+</h4>
-                                <p class="mb-0">Asset Valuation Sold</p>
-                            </div>
+                            <h4>25 Lakhs+</h4>
+                            <p class="mb-0">Asset Valuation Sold</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="stats-item text-center">
+                        <div class="stats-item">
                             <div class="stat-icon"><i class="bi bi-controller"></i></div>
-                            <div class="stat-content">
-                                <h4>6+ Years</h4>
-                                <p class="mb-0">Game Dev Experience</p>
-                            </div>
+                            <h4>6+ Years</h4>
+                            <p class="mb-0">Game Dev Experience</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="stats-item text-center">
+                        <div class="stats-item">
                             <div class="stat-icon"><i class="bi bi-check-circle-fill"></i></div>
-                            <div class="stat-content">
-                                <h4>10+ Projects</h4>
-                                <p class="mb-0">Delivered Successfully</p>
-                            </div>
+                            <h4>10+ Projects</h4>
+                            <p class="mb-0">Delivered Successfully</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="stats-item text-center">
+                        <div class="stats-item">
                             <div class="stat-icon"><i class="bi bi-building-fill"></i></div>
-                            <div class="stat-content">
-                                <h4>4 Branches</h4>
-                                <p class="mb-0">Game, Film, ArchViz, Software</p>
-                            </div>
+                            <h4>4 Branches</h4>
+                            <p class="mb-0">Game, Film, ArchViz, Tech</p>
                         </div>
                     </div>
                 </div>
@@ -209,14 +186,19 @@
         <section id="about" class="section py-5 bg-light">
             <div class="container" data-aos="fade-up">
                 <div class="row align-items-center">
-                    <div class="col-xl-5">
+                    <div class="col-xl-6">
                         <span class="about-meta">ABOUT THE STUDIO</span>
                         <h2 class="about-title">Turning Concepts into Digital Reality</h2>
+                        
+                        <div class="mb-4">
+                            <img src="images/Aditya_Divte Production.png" alt="Aditya Divte Production" class="img-fluid rounded-3 shadow-sm" style="border: 1px solid #ddd;">
+                        </div>
+
                         <p class="text-muted">
                             Founded by Aditya Divte, a Solo Game Designer and Unreal Engine Specialist. 
                             Our studio has evolved from independent game development to a full-scale production house. 
                             We collaborate with industry giants (like NetEase) and independent studios to deliver 
-                            AAA-quality assets, immersive virtual environments, and robust software ecosystems.
+                            AAA-quality assets.
                         </p>
                         
                         <div class="row mt-4">
@@ -229,12 +211,12 @@
                             <div class="col-md-6">
                                 <ul class="feature-list">
                                     <li><i class="bi bi-check-circle-fill"></i> AAA Testing Experience</li>
-                                    <li><i class="bi bi-check-circle-fill"></i> Cyber Law & IP Protection</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> IP & Trademark Expertise</li>
                                 </ul>
                             </div>
                         </div>
 
-                        <div class="d-flex align-items-center gap-3 mt-4 p-3 bg-white rounded shadow-sm">
+                        <div class="d-flex align-items-center gap-3 mt-4 p-3 bg-white rounded shadow-sm" style="max-width: 300px;">
                             <img src="images/WhatsApp_Image_2026-02-05_at_10.31.27_PM-removebg-preview.png" alt="Aditya Divte" class="profile-image">
                             <div>
                                 <h5 class="m-0 fw-bold">Aditya Divte</h5>
@@ -242,14 +224,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 offset-xl-1 mt-5 mt-xl-0">
-                        <div class="position-relative">
-                            <img src="images/Aditya_Divte Game.png" class="img-fluid rounded-4 shadow-lg w-100" alt="Studio Work">
-                            <div class="experience-badge">
-                                <h3>6+ <span>Years</span></h3>
-                                <p class="mb-0 text-muted">Of Digital Innovation</p>
-                            </div>
-                        </div>
+                    
+                    <div class="col-xl-5 offset-xl-1 mt-5 mt-xl-0">
+                        <img src="images/Aditya_Divte Game.png" class="img-fluid rounded-4 shadow-lg w-100" alt="Game Dev Work">
                     </div>
                 </div>
             </div>
@@ -266,11 +243,11 @@
                 <div class="row g-4">
                     
                     <div class="col-lg-6">
-                        <div class="service-card d-flex">
-                            <div class="flex-shrink-0">
-                                <img src="images/Aditya_Divte Game.png" style="width: 100px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div class="service-card">
+                            <div class="service-img-wrapper">
+                                <img src="images/Aditya_Divte Game.png" alt="Game Development">
                             </div>
-                            <div>
+                            <div class="service-content">
                                 <h3>Game Development</h3>
                                 <p class="text-muted small">Specializing in Unreal Engine 5. We design open-world survival mechanics, AI behavior trees, and horror experiences.</p>
                                 <a href="#contact" class="read-more">View Projects <i class="bi bi-arrow-right"></i></a>
@@ -279,11 +256,11 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <div class="service-card d-flex">
-                            <div class="flex-shrink-0">
-                                <img src="images/Aditya_Divte Flim.png" style="width: 100px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div class="service-card">
+                            <div class="service-img-wrapper">
+                                <img src="images/Aditya_Divte Flim.png" alt="Film Production">
                             </div>
-                            <div>
+                            <div class="service-content">
                                 <h3>Film & VFX</h3>
                                 <p class="text-muted small">Virtual production and Cinematic VFX. Bridging real-time rendering with traditional filmmaking using DaVinci Resolve.</p>
                                 <a href="#contact" class="read-more">View Showreel <i class="bi bi-arrow-right"></i></a>
@@ -292,11 +269,11 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <div class="service-card d-flex">
-                            <div class="flex-shrink-0">
-                                <img src="images/Aditya_Divte Construction.jpg" style="width: 100px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div class="service-card">
+                            <div class="service-img-wrapper">
+                                <img src="images/Aditya_Divte Construction.jpg" alt="Construction & ArchViz">
                             </div>
-                            <div>
+                            <div class="service-content">
                                 <h3>ArchViz & VR</h3>
                                 <p class="text-muted small">Architectural visualization and VR property walkthroughs. Transforming blueprints into immersive digital havens.</p>
                                 <a href="#contact" class="read-more">See Blueprints <i class="bi bi-arrow-right"></i></a>
@@ -305,11 +282,11 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <div class="service-card d-flex">
-                            <div class="flex-shrink-0">
-                                <img src="images/ChatGPT Image Jul 2, 2025, 03_05_21 AM.jpg" style="width: 100px; height: 80px; object-fit: cover; border-radius: 8px;">
+                        <div class="service-card">
+                            <div class="service-img-wrapper">
+                                <img src="images/ChatGPT Image Jul 2, 2025, 03_05_21 AM.jpg" alt="Software Lab" style="max-height: 250px; object-fit: cover;">
                             </div>
-                            <div>
+                            <div class="service-content">
                                 <h3>Software Solutions</h3>
                                 <p class="text-muted small">Custom app development, automation tools, and social media platforms built on robust architectures.</p>
                                 <a href="#contact" class="read-more">IT Solutions <i class="bi bi-arrow-right"></i></a>
@@ -321,99 +298,42 @@
             </div>
         </section>
 
-        <section id="internship" class="section py-5 bg-light">
-            <div class="container text-center mb-5">
-                <h2 class="fw-bold">Training & Talent Development</h2>
-                <p class="text-muted">Mentoring the next generation of developers through hands-on studio experience.</p>
-            </div>
-
+        <footer class="footer">
             <div class="container">
-                <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
-                    <li class="nav-item"><button class="nav-link active">Hands-on Projects</button></li>
-                    <li class="nav-item"><button class="nav-link">Industry Mentorship</button></li>
-                    <li class="nav-item"><button class="nav-link">Career Pathways</button></li>
-                </ul>
-                
-                <div class="row align-items-center bg-white p-5 rounded-4 shadow-sm">
-                    <div class="col-lg-6">
-                        <h3 class="fw-bold text-primary">Live Studio Experience</h3>
-                        <p class="fst-italic text-muted">
-                            Unlike traditional coaching, we offer direct involvement in live industry projects. 
-                            Work alongside our core team on Game Design, VFX pipelines, and App Development.
+                <div class="row gy-4">
+                    <div class="col-lg-4 col-md-6">
+                        <a href="index.html" class="d-flex align-items-center mb-3 text-white text-decoration-none">
+                            <span class="fs-4 fw-bold">Aditya Divte Production</span>
+                        </a>
+                        <p class="text-white-50">
+                            A multidisciplinary production house delivering excellence in Games, Film, and Tech across Maharashtra.
                         </p>
-                        <ul class="list-unstyled mt-3">
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Real-world asset creation</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Agile workflow training</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Career guidance & portfolio building</li>
-                        </ul>
-                        <a href="mailto:nerotomedia@gmail.com" class="btn btn-primary mt-3">Apply Now</a>
                     </div>
-                    <div class="col-lg-6 text-center">
-                        <img src="images/ChatGPT Image Jul 2, 2025, 03_05_21 AM.jpg" class="img-fluid rounded-3" alt="Training">
+                    <div class="col-lg-4 col-md-6">
+                        <h5 class="text-white mb-3">Contact Us</h5>
+                        <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i> Chhatrapati Sambhajinagar, Maharashtra</p>
+                        <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i> +91 935614061</p>
+                        <p class="mb-2"><i class="bi bi-envelope-fill me-2"></i> nerotomedia@gmail.com</p>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <h5 class="text-white mb-3">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#services">Our Services</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
                     </div>
                 </div>
+                <div class="border-top border-secondary mt-4 pt-4 text-center text-white-50">
+                    <p class="mb-0">&copy; 2026 <strong>Aditya Divte Production</strong>. All Rights Reserved.</p>
+                </div>
             </div>
-        </section>
-
-        <section class="py-5 bg-dark text-white text-center">
-            <div class="container">
-                <h2 class="fw-bold mb-3">Ready to Build Your Haven?</h2>
-                <p class="text-light mb-4" style="max-width: 600px; margin: 0 auto;">
-                    Whether it's a digital world, a cinematic masterpiece, or a software ecosystem. 
-                    Aditya Divte Production brings your vision to life.
-                </p>
-                <a href="mailto:nerotomedia@gmail.com" class="btn btn-light rounded-pill px-5 fw-bold">Start Project</a>
-            </div>
-        </section>
+        </footer>
 
     </main>
 
-    <footer id="contact" class="footer">
-        <div class="container">
-            <div class="row gy-4">
-                <div class="col-lg-4 col-md-6">
-                    <a href="index.html" class="d-flex align-items-center mb-3 text-white text-decoration-none">
-                        <span class="fs-4 fw-bold">Aditya Divte Production</span>
-                    </a>
-                    <p class="text-white-50">
-                        A multidisciplinary production house delivering excellence in Games, Film, and Tech across Maharashtra.
-                    </p>
-                    <div class="d-flex gap-3 mt-3">
-                        <a href="#" class="text-white fs-5"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-white fs-5"><i class="bi bi-youtube"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="text-white mb-3">Contact Us</h5>
-                    <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i> Chhatrapati Sambhajinagar, Maharashtra</p>
-                    <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i> +91 935614061</p>
-                    <p class="mb-2"><i class="bi bi-envelope-fill me-2"></i> nerotomedia@gmail.com</p>
-                </div>
-
-                <div class="col-lg-4 col-md-12">
-                    <h5 class="text-white mb-3">Our Services</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#services">Game Development</a></li>
-                        <li><a href="#services">Cinematic VFX</a></li>
-                        <li><a href="#services">ArchViz Construction</a></li>
-                        <li><a href="#services">Software Solutions</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-top border-secondary mt-4 pt-4 text-center text-white-50">
-                <p class="mb-0">&copy; 2026 <strong>Aditya Divte Production</strong>. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.js"></script>
-    
-    <script>
-        AOS.init();
-    </script>
+    <script> AOS.init(); </script>
 </body>
 </html>
